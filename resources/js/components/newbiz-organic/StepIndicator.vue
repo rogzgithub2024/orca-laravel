@@ -1,5 +1,5 @@
 <template>
-    <div class="r-m-3 flex items-center justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-32 xl:gap-40 w-full py-0 sm:py-8 md:py-10 lg:py-14 xl:py-16">
+    <div class="flex items-center justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-32 xl:gap-40 w-full py-0 sm:py-8 md:py-10 lg:py-14 xl:py-0">
         <div v-for="(step, index) in steps" :key="step.number" 
              :class="['flex items-center', index === 0 ? 'ml-2 sm:ml-4 md:ml-12 lg:ml-16 xl:ml-20' : '', index === steps.length - 1 ? 'mr-2 sm:mr-4 md:mr-12 lg:mr-16 xl:mr-20' : '']">
             <!-- Step Circle and Title -->

@@ -1,14 +1,13 @@
 <template>
-    <div class="min-h-screen bg-gray-50 flex items-start justify-center px-2 sm:px-4 pt-24 sm:pt-28 md:pt-32 pb-4 sm:pb-8 md:pb-12">
-        <div class="w-full max-w-6xl lg:max-w-7xl">
-            <!-- Step Indicator -->
-            <StepIndicator :steps="steps" :current-step="currentStep" />
-
+    <div class="min-h-screen bg-gray-50 flex items-start justify-center px-2 sm:px-4 pt-2 pb-4 sm:pb-8 md:pb-12">
+        <!-- Step Indicator -->
+        <StepIndicator :steps="steps" :current-step="currentStep" />
+        
+        <div class="w-full max-w-6xl lg:max-w-7xl mt-32 sm:mt-36 md:mt-[120px] lg:mt-[115px]">
             <!-- Main Form Content - Centered -->
-            <div class="bg-white rounded-lg overflow-hidden border border-gray-200 " 
+            <div class="" 
                  style="scrollbar-width: thin; scrollbar-color: #9ca3af #f3f4f6;" >
-                <div class="p-4 sm:p-6 md:p-12 lg:p-16 xl:p-20 " >
-                    <div v-if="currentStep === 1" class="p-4 space-y-5 sm:space-y-6 md:space-y-8">
+                    <div v-if="currentStep === 1" class="p-4 space-y-5 sm:space-y-6 md:space-y-2 ">
                         <OwnerInformationSection
                             :form-data="formData"
                             @data-change="handleDataChange"
@@ -75,7 +74,6 @@
                         </svg>
                     </button>
                 </div>
-            </div>
         </div>
     </div>
 </template>
@@ -94,7 +92,7 @@ import ReviewSection from '@/components/advertising/ReviewSection.vue';
 
 const currentStep = ref(1);
 const steps = [
-    { number: 1, title: 'Homeowner Details' },
+    { number: 1, title: 'Homeowner Detail' },
     { number: 2, title: 'Rental Property Information & Features' },
     { number: 3, title: 'Occupancy and Property Availability' },
     { number: 4, title: 'Utilities, Inclusions, Restrictions' },

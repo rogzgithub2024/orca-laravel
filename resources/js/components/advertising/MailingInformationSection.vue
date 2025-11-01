@@ -1,7 +1,7 @@
 <template>
     <div class="border border-gray-100 rounded-2xl bg-gray-50 shadow-sm hover:shadow-md transition-shadow duration-300">
         <div
-            class="flex items-center justify-between p-4 bg-white border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors"
+            class="flex items-center justify-between bg-white border-b border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors"
             @click="isOpen = !isOpen"
         >
             <div class="flex items-center gap-3 r-p-3">
