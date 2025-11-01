@@ -1,0 +1,29 @@
+$CREATE_RELEASE()
+
+cd $FORGE_RELEASE_DIRECTORY
+
+$FORGE_COMPOSER install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+# Ensure public/build directory exists
+mkdir -p public/build
+
+# Install and build assets with error handling
+npm ci --production=false || exit 1
+npm run build || exit 1
+
+# Verify build was successful
+if [ ! -f "public/build/manifest.json" ]; then
+    echo "ERROR: Vite manifest.json not found after build!"
+    exit 1
+fi
+
+$FORGE_PHP artisan optimize
+
+$FORGE_PHP artisan storage:link
+
+$FORGE_PHP artisan migrate --force
+
+$ACTIVATE_RELEASE()
+
+$RESTART_QUEUES()
+

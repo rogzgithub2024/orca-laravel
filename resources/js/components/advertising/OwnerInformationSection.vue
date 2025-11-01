@@ -12,7 +12,7 @@
             </div>
             <button
                 type="button"
-                class="flex items-center gap-2 text-black hover:text-gray-700 font-medium text-sm r-mr-3"
+                class="flex items-center gap-2 text-black hover:text-gray-700  text-sm r-mr-3"
                 @click.stop="isOpen = !isOpen"
             >
                 <svg
@@ -28,7 +28,7 @@
         <div v-if="isOpen" class="r-p-3 space-y-5 sm:space-y-6">
             <div class="space-y-5 sm:space-y-6">
                 <h5 class="font-semibold text-gray-800 text-base sm:text-lg r-mb-2 r-mt-2">Owner</h5>
-                <p class="text-red-400 text-sm sm:text-base mb-4 sm:mb-5 lg:mb-6 font-medium r-mb-2">
+                <p class="text-red-400 text-sm sm:text-base mb-4 sm:mb-5 lg:mb-6  r-mb-2">
                     Please enter Owner Legal Name or Business Legal Name (if applicable)
                 </p>
                 <!-- Business Legal Name, Owner Email, Phone in one row -->
@@ -43,7 +43,7 @@
                             :value="formData.businessLegalName"
                             @input="handleChange('businessLegalName', $event.target.value)"
                             placeholder="Business Legal Name"
-                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                         />
                     </div>
 
@@ -57,7 +57,7 @@
                             :value="formData.ownerEmail"
                             @input="handleChange('ownerEmail', $event.target.value)"
                             placeholder="Owner Email is required*"
-                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                         />
                     </div>
 
@@ -71,7 +71,7 @@
                             :value="formData.phone"
                             @input="handleChange('phone', $event.target.value)"
                             placeholder="(000) 000-0000"
-                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                         />
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                             :value="formData.firstName"
                             @input="handleChange('firstName', $event.target.value)"
                             placeholder="First Name*"
-                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                         />
                     </div>
                     <div class="bg-gray-50 rounded-2xl p-5 sm:p-6 md:p-7 lg:p-8 xl:p-10 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 r-p-3 r-mb-3">
@@ -105,7 +105,7 @@
                             :value="formData.lastName"
                             @input="handleChange('lastName', $event.target.value)"
                             placeholder="Last Name*"
-                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                         />
                     </div>
                     <div class="bg-gray-50 rounded-2xl p-5 sm:p-6 md:p-7 lg:p-8 xl:p-10 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 r-p-3 r-mb-3">
@@ -119,7 +119,7 @@
                             type="date"
                             :value="formData.dateOfBirth"
                             @input="handleChange('dateOfBirth', $event.target.value)"
-                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                            class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                         />
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                     <label class="flex items-center gap-2 text-base sm:text-lg lg:text-md text-gray-800 mb-4 sm:mb-5 lg:mb-6">
                         Resident Status <span class="text-red-500 text-xl">*</span>
                     </label>
-                    <p class="text-red-400 text-sm sm:text-base mb-4 sm:mb-5 lg:mb-6 font-medium r-mb-2">
+                    <p class="text-red-400 text-sm sm:text-base mb-4 sm:mb-5 lg:mb-6  r-mb-2">
                         [When filing your taxes do you claim you are a Resident or Non-resident?]
                     </p>
                     <div class="flex flex-wrap items-center gap-6">
@@ -142,7 +142,7 @@
                                 @change="handleChange('residentStatus', 'Resident')"
                                 class="w-4 h-4 text-black focus:ring-black/10"
                             />
-                            <span class="text-gray-800 font-medium">Resident</span>
+                            <span class="text-gray-800 ">Resident</span>
                         </label>
                         <label class="flex items-center gap-3 cursor-pointer">
                             <input
@@ -153,7 +153,7 @@
                                 @change="handleChange('residentStatus', 'Non-Resident')"
                                 class="w-4 h-4 text-black focus:ring-black/10"
                             />
-                            <span class="text-gray-800 font-medium">Non-Resident</span>
+                            <span class="text-gray-800 ">Non-Resident</span>
                         </label>
                     </div>
                 </div>
@@ -163,17 +163,17 @@
                     <h5 class="font-semibold text-gray-800 text-base sm:text-lg r-mb-2 r-mt-2">Co-Owners</h5>
                     <div v-for="(coOwner, index) in formData.coOwners" :key="index" class="r-p-3 bg-gray-100 p-5 sm:p-6 rounded-2xl space-y-5 border border-gray-200 r-mb-2">
                         <div class="flex justify-between items-center">
-                            <h6 class="font-medium text-gray-800">Co-Owner {{ index + 1 }}</h6>
+                            <h6 class=" text-gray-800">Co-Owner {{ index + 1 }}</h6>
                             <button
                                 type="button"
                                 @click="removeCoOwner(index)"
-                                class="text-red-600 hover:text-red-700 text-sm font-medium"
+                                class="text-red-600 hover:text-red-700 text-sm "
                             >
                                 Remove
                             </button>
                         </div>
 
-                        <p class="text-red-400 text-sm sm:text-base mb-1 font-medium r-mb-2">
+                        <p class="text-red-400 text-sm sm:text-base mb-1  r-mb-2">
                             Please enter Co-Owner Legal Name
                         </p>
 
@@ -188,14 +188,14 @@
                                     :value="coOwner.ownerEmail || ''"
                                     @input="updateCoOwner(index, 'ownerEmail', $event.target.value)"
                                     placeholder="Co-Owner Email is required*"
-                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                                 />
                             </div>
                             <div>
                                 <label class="flex items-center gap-2 text-base sm:text-lg lg:text-md text-gray-800 mb-2">
                                     Resident Status <span class="text-red-500 text-xl">*</span>
                                 </label>
-                                <p class="text-red-400 text-sm sm:text-base mb-3 font-medium r-mb-2">
+                                <p class="text-red-400 text-sm sm:text-base mb-3  r-mb-2">
                                     [When filing your taxes do you claim you are a Resident or Non-resident?]
                                 </p>
                                 <div class="flex flex-wrap items-center gap-6">
@@ -208,7 +208,7 @@
                                             @change="updateCoOwner(index, 'residentStatus', 'Resident')"
                                             class="w-4 h-4 text-black focus:ring-black/10"
                                         />
-                                        <span class="text-gray-800 font-medium">Resident</span>
+                                        <span class="text-gray-800 ">Resident</span>
                                     </label>
                                     <label class="flex items-center gap-3 cursor-pointer">
                                         <input
@@ -219,7 +219,7 @@
                                             @change="updateCoOwner(index, 'residentStatus', 'Non-Resident')"
                                             class="w-4 h-4 text-black focus:ring-black/10"
                                         />
-                                        <span class="text-gray-800 font-medium">Non-Resident</span>
+                                        <span class="text-gray-800 ">Non-Resident</span>
                                     </label>
                                 </div>
                             </div>
@@ -236,7 +236,7 @@
                                     :value="coOwner.phone || ''"
                                     @input="updateCoOwner(index, 'phone', $event.target.value)"
                                     placeholder="(000) 000-0000"
-                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                                 />
                             </div>
                             <div>
@@ -251,7 +251,7 @@
                                     :value="coOwner.firstName"
                                     @input="updateCoOwner(index, 'firstName', $event.target.value)"
                                     placeholder="First Name*"
-                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                                 />
                             </div>
                             <div>
@@ -266,7 +266,7 @@
                                     :value="coOwner.lastName"
                                     @input="updateCoOwner(index, 'lastName', $event.target.value)"
                                     placeholder="Last Name*"
-                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                                 />
                             </div>
                             <div>
@@ -281,7 +281,7 @@
                                     :value="coOwner.dateOfBirth"
                                     @input="updateCoOwner(index, 'dateOfBirth', $event.target.value)"
                                     placeholder="Date of Birth*"
-                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl font-medium"
+                                    class="r-p-5 w-full px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-4 sm:py-5 md:py-6 lg:py-7 xl:py-8 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-black/10 focus:border-black transition-all duration-300 text-base sm:text-lg lg:text-xl text-gray-900 placeholder-gray-400 bg-white hover:border-gray-400 hover:shadow-lg shadow-md focus:shadow-xl "
                                 />
                             </div>
                         </div>

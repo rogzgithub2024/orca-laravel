@@ -5,7 +5,7 @@
             <StepIndicator :steps="steps" :current-step="currentStep" />
 
             <!-- Main Form Content - Centered -->
-            <div class="r-mt-15 bg-white rounded-lg overflow-hidden border border-gray-200 " 
+            <div class="bg-white rounded-lg overflow-hidden border border-gray-200 " 
                  style="scrollbar-width: thin; scrollbar-color: #9ca3af #f3f4f6;" >
                 <div class="p-4 sm:p-6 md:p-12 lg:p-16 xl:p-20 " >
                     <div v-if="currentStep === 1" class="p-4 space-y-5 sm:space-y-6 md:space-y-8">
