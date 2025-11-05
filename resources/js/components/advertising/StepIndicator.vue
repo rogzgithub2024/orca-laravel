@@ -12,7 +12,7 @@
                                     step.number === currentStep
                                         ? 'bg-black text-white border-2 border-black'
                                         : step.number < currentStep
-                                        ? 'bg-gray-800 text-white'
+                                        ? 'bg-green-600 text-white border-2 border-green-600'
                                         : 'bg-gray-100 text-gray-400 border-2 border-gray-300'
                                 ]"
                             >
@@ -39,7 +39,7 @@
                                     step.number === currentStep
                                         ? 'bg-black text-white border-2 border-black shadow-lg scale-110'
                                         : step.number < currentStep
-                                        ? 'bg-gray-800 text-white shadow-md'
+                                        ? 'bg-green-600 text-white border-2 border-green-600 shadow-md'
                                         : 'bg-gray-100 text-gray-400 border-2 border-gray-300'
                                 ]"
                             >

@@ -1,9 +1,9 @@
 <template>
     <div class="min-h-screen bg-gray-50 flex items-start justify-center px-2 sm:px-4 pt-2 pb-4 sm:pb-8 md:pb-12">
         <!-- Step Indicator -->
-        <StepIndicator :steps="steps" :current-step="currentStep" />
+        <StepIndicator v-if="!isSubmitted" :steps="steps" :current-step="currentStep" />
         
-        <div class="w-full max-w-6xl lg:max-w-7xl mt-32 sm:mt-36 md:mt-[120px] lg:mt-[115px]">
+        <div :class="['w-full max-w-6xl lg:max-w-7xl', isSubmitted ? 'mt-0' : 'mt-32 sm:mt-36 md:mt-[120px] lg:mt-[110px]']">
             <!-- Main Form Content - Centered -->
             <div class="" 
                  style="scrollbar-width: thin; scrollbar-color: #9ca3af #f3f4f6;" >
@@ -62,8 +62,9 @@
                     </div>
                 </div>
 
-                <!-- Navigation Button -->
-                <div v-if="currentStep === 1" class="p-4 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 pb-6 sm:pb-8 md:pb-12 flex justify-end border-t border-gray-200 pt-6">
+
+                <div v-if="currentStep === 1" class="flex-shrink-0 r-mt-3 r-pt-3 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200 bg-white flex flex-col sm:flex-row justify-between gap-3 sm:gap-4">
+                    <p></p>
                     <button
                         @click="handleNext"
                         class="p-4 cursor-pointer bg-black hover:bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold flex items-center gap-2 transition-colors duration-200 shadow-lg hover:shadow-xl"
@@ -91,6 +92,7 @@ import OtherDetailsSection from '@/components/advertising/OtherDetailsSection.vu
 import ReviewSection from '@/components/advertising/ReviewSection.vue';
 
 const currentStep = ref(1);
+const isSubmitted = ref(false);
 const steps = [
     { number: 1, title: 'Homeowner Detail' },
     { number: 2, title: 'Rental Property Information & Features' },
@@ -218,7 +220,8 @@ const handleBack = () => {
 };
 
 const handleSubmit = () => {
-    // TODO: submit handler
+    isSubmitted.value = true;
+    // TODO: submit handler - API call here
 };
 </script>
 

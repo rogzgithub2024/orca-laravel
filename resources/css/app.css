@@ -1,6 +1,14 @@
+
 @import "tailwindcss";
 
 @source "../**/*.{js,vue,ts,jsx,tsx,mdx}";
+
+/* Edge browser compatibility - ensure box-sizing is applied globally */
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
 
 :root {
   --background: #ffffff;

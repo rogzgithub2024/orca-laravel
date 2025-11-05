@@ -12,25 +12,24 @@
                         <StepIndicator :steps="steps" :current-step="currentStep" />
                     </div>
                 </div>
-
                 <div class="flex flex-col lg:flex-row flex-1 min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[650px]">
                     <!-- Success Message -->
-                    <div v-if="isSubmitted" class="w-full flex items-center justify-center p-8 sm:p-12 md:p-16">
-                        <div class="w-full text-center">
-                            <div class="mb-6 flex justify-center">
-                                <div class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-green-100 flex items-center justify-center">
+                    <div v-if="isSubmitted" class="w-full flex items-center justify-center" style="padding: 2rem; box-sizing: border-box;">
+                        <div class="w-full text-center" style="box-sizing: border-box;">
+                            <div class="mb-6 flex justify-center" style="margin-bottom: 1.5rem; box-sizing: border-box;">
+                                <div class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-green-100 flex items-center justify-center" style="box-sizing: border-box;">
                                     <svg class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
                             </div>
-                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4" style="margin-bottom: 1rem; box-sizing: border-box;">
                                 Request Submitted Successfully!
                             </h2>
-                            <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-2">
+                            <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-2" style="margin-bottom: 0.5rem; box-sizing: border-box;">
                                 Thank you for your interest in Orca Realty Inc.
                             </p>
-                            <p class="text-sm sm:text-base md:text-lg text-gray-500">
+                            <p class="text-sm sm:text-base md:text-lg text-gray-500" style="box-sizing: border-box;">
                                 One of our Property Management experts will review your information and prepare a personalized Rental Evaluation for you. We'll be in touch soon!
                             </p>
                         </div>
@@ -674,4 +673,30 @@ const handleSubmit = () => {
     // You can add API call here
 };
 </script>
+
+<style scoped>
+/* Edge browser compatibility fixes for padding and margin */
+/* Ensure box-sizing is applied */
+* {
+    box-sizing: border-box;
+}
+
+/* Explicit styles for Edge browser compatibility */
+.success-message-container {
+    padding: 2rem !important;
+    box-sizing: border-box !important;
+}
+
+@media (min-width: 640px) {
+    .success-message-container {
+        padding: 3rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .success-message-container {
+        padding: 4rem !important;
+    }
+}
+</style>
 

@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'complycube' => [
+        'api_key' => env('COMPLYCUBE_API_KEY'),
+        'base_url' => env('COMPLYCUBE_BASE_URL', 'https://api.complycube.com/v1'),
+    ],
+
 ];
