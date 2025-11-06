@@ -9,6 +9,7 @@ import Advertising from './pages/Advertising.vue';
 import NewbizOrganic from './pages/NewbizOrganic.vue';
 import Newbiz from './pages/Newbiz.vue';
 import ApplicationForm from './pages/ApplicationForm.vue';
+import ScheduleAVisit from './pages/ScheduleAVisit.vue';
 
 const routes = [
     { path: '/', component: Home },
@@ -16,6 +17,7 @@ const routes = [
     { path: '/newbiz-organic', component: NewbizOrganic },
     { path: '/newbiz', component: Newbiz },
     { path: '/application-form', component: ApplicationForm },
+    { path: '/schedule-a-visit', component: ScheduleAVisit },
 ];
 
 const router = createRouter({
